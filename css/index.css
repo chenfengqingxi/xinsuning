@@ -464,7 +464,7 @@ aside{
 	/* background: green; */
 }
 .banner-left{
-	width: 77px;
+	width: 80px;
 	height: 100%;
 	background: url('../img/b-l1.png') no-repeat center center;
 	float: left;
@@ -537,17 +537,16 @@ aside{
     position: absolute; 
     left: 0;
     top: 0;
-	display: none;
+	opacity:0;
+	transition:opacity 1s;
 }
-.bannerpic li.active{
-	display:block;
+.bannerpic .active{
+	opacity:1;
 }
-
 .banner-a1{
 	width: 150px;
 	height: 213px;
-	background:
-			rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -592,6 +591,7 @@ aside{
 	bottom: 0;
 	margin-top: auto;
 	margin-bottom: auto;
+	cursor: pointer;
 }
 .right{
 	right: 0;
@@ -616,6 +616,9 @@ aside{
 	margin-right: 0;
 }
 .lunbodian li:hover{
+	background: #f09321;
+}
+.lunbodian .active{
 	background: #f09321;
 }
 .icon9{
@@ -747,6 +750,7 @@ aside{
     height: 305px;
     /* background: yellowgreen; */
     margin: 20px auto 0;
+	overflow: hidden;
 }
 .djh-top{
 	width: 100%;
@@ -774,6 +778,75 @@ aside{
 	color: #ffffff;
 	margin-left: 5px;
 }
+.dajuhui_top_center{
+	display: block;
+	width: auto;
+	height: 39px;
+	background: #f2f2f2;
+	float: left;
+	margin-left: 66px;
+}
+a.active1{
+	border-bottom: 4px solid #dd2726;
+}
+a.active1 .dajuhui_p{
+	color: #dd2726;
+	margin-top: 13px;
+	transition: all 0.5s;
+}
+.dajuhui_top_center img{
+	float: left;
+	display: block;
+	width: 13px;
+	height: 14px;
+	margin-top: 14px;
+}
+.caini{
+	width:100%;
+	height:340px;
+	display: flex;
+	background: #ffffff;
+}
+.caini li.caichild{
+	width:20%;
+	height:100%;
+	box-sizing: border-box;
+	boeder-top:1px soild #F5F5F5;
+	border-right: 1px solid  #F5F5F5;
+	padding: 0 20px;
+}
+.caini li.caichild a{
+	display: block;
+	width:100%;
+	height:220px;
+}
+.caini li.caichild a img{
+	width:100%;
+	height: 100%;
+}
+.caini li.caichild p{
+	font-size: 13px;
+	color: #111;
+	text-align: center;
+	line-height: 24px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.caini li.caichild i{
+	color: #FF6600;
+	font-size: 15px;
+	font-weight: bold;
+}
+.dajuhui_p{
+	width: auto;
+	height: 12px;
+	float: left;
+	margin-left: 9px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #333;
+	margin-top: 16px;
+}
 .djh-top-right{
 	width: 115px;
 	height: 24px;
@@ -798,7 +871,11 @@ aside{
 .djh-bottom{
 	width: 100%;
 	height: 260px;
+	display: none;
 	/* background: pink; */
+}
+.activebtm{
+	display: block;
 }
 .djh-list{
 	width: 200px;
@@ -806,29 +883,30 @@ aside{
 	background: #ffffff;
 	float: left;
 	position: relative;
-	transition: all 1s;
+	transition: all 0.5s;
 }
 .djh-list:hover .wenzid4{
 	color: #ff6600;
 }
 .djh-list:hover .djh-list1 img{
-	transform: scale(1.2, 1.2);
+	transform: scale(1.1, 1.1);
 }
 .djh-tupian{
-	width: 199px;
-	height: 184px;
+	width: 130px;
+	height: 160px;
+	padding-top: 20px;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 .djh-tupian img{
-	width: 77px;
-	height: 135px;
-	margin: 39px 50px 0;
-	transition: all 1.5s;
+	width: 100%;
+	transition: all 0.3s;
 }
 .wenzidjh{
 	width: 158px;
-	height: 67px;
+	height: 36px;
 	/* background: pink; */
-	padding: 5px 21px 0;
+	padding: 20px 21px 0;
 }
 .wenzid4{
 	font-size: 11px;
@@ -906,6 +984,7 @@ aside{
     background: #ffffff;
     overflow: hidden;
 }
+.
 .haohuo-bottom{
 	width: 369px;
 	height: 362px;
@@ -1397,9 +1476,6 @@ aside{
 	bottom: 0;
 	margin-top: auto;
 	margin-bottom: auto;
-}
-.jiantou{
-	cursor: pointer;
 }
 .spd-title1{
 	font-size: 20px;
