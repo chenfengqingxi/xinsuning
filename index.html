@@ -5,8 +5,10 @@
 	<title>苏宁易购</title>
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="shortcut icon" href="suning.ico">
+    <script src="suning.js"></script>
 </head>
 <body>
+
     <div class="aside2">
     	<div class="aside2-pic"></div>
     	<ul class="aside2-list">
@@ -159,47 +161,6 @@
 		</a>
 	</div>
 	<!-- 导航结束 -->
-	<script>
-		window.onload=function () {
-			let n=0;
-            let lis=document.querySelectorAll('.bannerpic li');
-            let banner=document.querySelector('.bannerpic')
-            function move() {
-                n++;
-                if (n>=lis.length) {
-                    n=0;
-                }
-                lis.forEach(function (dom, index) {
-                    dom.classList.remove('active');
-                })
-                lis[n].classList.add('active')
-
-            }
-            let t=setInterval(move,2000)
-            banner.onmouseover=function () {
-                clearInterval(t)
-            }
-            banner.onmouseout=function () {
-                t=setInterval(move,2000)
-            }
-            document.querySelector('.jiantou .jiantoudi.right').onclick=function () {
-                move()
-			}
-            document.querySelector('.jiantou .jiantoudi.left').onclick=function () {
-                n--;
-                if(n<0){
-                    n=lis.length-1
-				}
-                lis.forEach(function (dom, index) {
-                    dom.classList.remove('active');
-                })
-                lis[n].classList.add('active')
-            }
-
-
-//
-        }
-	</script>
 	<!-- banner开始 -->
 	<div class="banner">
 		<div class="banner-left"></div>
@@ -374,18 +335,18 @@
 		    		<img src="img/b01.png" alt="">
 		    	</div>
 		    </a>
-		    <div class="jiantou">
+		    <div  class="jiantou">
 		        <div class="jiantoudi left">
 			        <i class="iconfont icon9">&#xe604;</i>
 			    </div>
 		    </div>
-		    <div href="" class="jiantou">
+		    <div  class="jiantou">
 		        <div class="jiantoudi right">
 			        <i class="iconfont icon9">&#xe601;</i>
 			    </div>
 		    </div>
-		    <a href="">
-		        <ul class="lunbodian">
+		    <ul class="lunbodian">
+		    	    <li class="active"></li>
 		    	    <li></li>
 		    	    <li></li>
 		    	    <li></li>
@@ -393,9 +354,7 @@
 		    	    <li></li>
 		    	    <li></li>
 		    	    <li></li>
-		    	    <li></li>
-		        </ul>
-		    </a>
+		    </ul>
 		</div>
 		<div class="denglu">
 			<a href="" class="denglu-top">
@@ -539,88 +498,183 @@
 				<div class="wenzid1">大聚惠</div>
 				<div class="wenzid2">有道理的便宜</div>
 			</div>
+			<a href="" class="dajuhui_top_center active1">
+				<img src="img/11.png" alt="">
+				<p class="dajuhui_p">今日聚慧</p>
+			</a>
+			<a href="" class="dajuhui_top_center">
+				<img src="img/moon.png" alt="">
+				<p class="dajuhui_p">夜市20：00开抢，上新抢先看</p>
+			</a>
 			<a class="djh-top-right">
 				<div class="wenzid3">更多聚惠好货</div>
 				<i class="iconfont icond1">&#xe601;</i>
 			</a>
 		</div>
+		<ul class="djh-bottom activebtm">
+			<li class="djh-list">
+				<a href="" class="djh-list1">
+				    <div class="djh-tupian">
+					    <img src="img/djh-1.jpg" alt="">
+					</div>
+					<div class="wenzidjh">
+					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+					    </p>
+					    <div class="djh-jiage">
+						    <div class="jiage-d1">￥4399.00</div>
+						    <div class="jiage-d2">￥6399.00</div>
+					</div>
+					</div>
+				</a>
+				<div class="shugang"></div>
+			</li>
+			<li class="djh-list">
+				<a href="" class="djh-list1">
+				    <div class="djh-tupian">
+					    <img src="img/djh-1.jpg" alt="">
+					</div>
+					<div class="wenzidjh">
+					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+					    </p>
+					    <div class="djh-jiage">
+						    <div class="jiage-d1">￥4399.00</div>
+						    <div class="jiage-d2">￥6399.00</div>
+					</div>
+					</div>
+				</a>
+				<div class="shugang"></div>
+			</li>
+			<li class="djh-list">
+				<a href="" class="djh-list1">
+				    <div class="djh-tupian">
+					    <img src="img/djh-1.jpg" alt="">
+					</div>
+					<div class="wenzidjh">
+					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+					    </p>
+					    <div class="djh-jiage">
+						    <div class="jiage-d1">￥4399.00</div>
+						    <div class="jiage-d2">￥6399.00</div>
+					</div>
+					</div>
+				</a>
+				<div class="shugang"></div>
+			</li>
+			<li class="djh-list">
+				<a href="" class="djh-list1">
+				    <div class="djh-tupian">
+					    <img src="img/djh-1.jpg" alt="">
+					</div>
+					<div class="wenzidjh">
+					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+					    </p>
+					    <div class="djh-jiage">
+						    <div class="jiage-d1">￥4399.00</div>
+						    <div class="jiage-d2">￥6399.00</div>
+					</div>
+					</div>
+				</a>
+				<div class="shugang"></div>
+			</li>
+			<li class="djh-list">
+				<a href="" class="djh-list1">
+				    <div class="djh-tupian">
+					    <img src="img/djh-1.jpg" alt="">
+					</div>
+					<div class="wenzidjh">
+					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+					    </p>
+					    <div class="djh-jiage">
+						    <div class="jiage-d1">￥4399.00</div>
+						    <div class="jiage-d2">￥6399.00</div>
+					</div>
+					</div>
+				</a>
+				<div class="shugang"></div>
+			</li>
+			<li class="djh-list2">
+				<a href="" class="djh-list3">
+					<img src="img/djh0.png" alt="">
+				</a>
+			</li>
+		</ul>
 		<ul class="djh-bottom">
 			<li class="djh-list">
 				<a href="" class="djh-list1">
-				    <div class="djh-tupian">
-					    <img src="img/djh1.png" alt="">
+					<div class="djh-tupian">
+						<img src="img/djh-2.webp%20(1).jpg" alt="">
 					</div>
 					<div class="wenzidjh">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage">
-						    <div class="jiage-d1">￥4399.00</div>
-						    <div class="jiage-d2">￥6399.00</div>
-					</div>
+						<p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+						</p>
+						<div class="djh-jiage">
+							<div class="jiage-d1">￥4399.00</div>
+							<div class="jiage-d2">￥6399.00</div>
+						</div>
 					</div>
 				</a>
 				<div class="shugang"></div>
 			</li>
 			<li class="djh-list">
 				<a href="" class="djh-list1">
-				    <div class="djh-tupian">
-					    <img src="img/djh1.png" alt="">
+					<div class="djh-tupian">
+						<img src="img/djh-2.webp.jpg" alt="">
 					</div>
 					<div class="wenzidjh">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage">
-						    <div class="jiage-d1">￥4399.00</div>
-						    <div class="jiage-d2">￥6399.00</div>
-					</div>
+						<p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+						</p>
+						<div class="djh-jiage">
+							<div class="jiage-d1">￥4399.00</div>
+							<div class="jiage-d2">￥6399.00</div>
+						</div>
 					</div>
 				</a>
 				<div class="shugang"></div>
 			</li>
 			<li class="djh-list">
 				<a href="" class="djh-list1">
-				    <div class="djh-tupian">
-					    <img src="img/djh1.png" alt="">
+					<div class="djh-tupian">
+						<img src="img/djh-2.webp.jpg" alt="">
 					</div>
 					<div class="wenzidjh">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage">
-						    <div class="jiage-d1">￥4399.00</div>
-						    <div class="jiage-d2">￥6399.00</div>
-					</div>
+						<p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+						</p>
+						<div class="djh-jiage">
+							<div class="jiage-d1">￥4399.00</div>
+							<div class="jiage-d2">￥6399.00</div>
+						</div>
 					</div>
 				</a>
 				<div class="shugang"></div>
 			</li>
 			<li class="djh-list">
 				<a href="" class="djh-list1">
-				    <div class="djh-tupian">
-					    <img src="img/djh1.png" alt="">
+					<div class="djh-tupian">
+						<img src="img/djh-2.webp%20(1).jpg" alt="">
 					</div>
 					<div class="wenzidjh">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage">
-						    <div class="jiage-d1">￥4399.00</div>
-						    <div class="jiage-d2">￥6399.00</div>
-					</div>
+						<p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+						</p>
+						<div class="djh-jiage">
+							<div class="jiage-d1">￥4399.00</div>
+							<div class="jiage-d2">￥6399.00</div>
+						</div>
 					</div>
 				</a>
 				<div class="shugang"></div>
 			</li>
 			<li class="djh-list">
 				<a href="" class="djh-list1">
-				    <div class="djh-tupian">
-					    <img src="img/djh1.png" alt="">
+					<div class="djh-tupian">
+						<img src="img/djh-2.webp.jpg" alt="">
 					</div>
 					<div class="wenzidjh">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage">
-						    <div class="jiage-d1">￥4399.00</div>
-						    <div class="jiage-d2">￥6399.00</div>
-					</div>
+						<p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
+						</p>
+						<div class="djh-jiage">
+							<div class="jiage-d1">￥4399.00</div>
+							<div class="jiage-d2">￥6399.00</div>
+						</div>
 					</div>
 				</a>
 				<div class="shugang"></div>
@@ -1122,7 +1176,9 @@
     	</ul>
     </a>
 	<!-- 第五层开始 -->
-	<a name="remenshouji"></a>
+
+<div id="zuidabox">
+	<!--<a name="remenshouji"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -1313,7 +1369,7 @@
 	</div>
 	<!-- 第五层结束 -->
 	<!-- 第六层开始 -->
-	<a name="jiayongdianqi"></a>
+	<!--<a name="jiayongdianqi"></a>-->
 	<div class="diliuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top diliucengtop">
@@ -1456,7 +1512,7 @@
     		</li>
     	</ul>
     </a>
-    <a name="zhinengshuma"></a>
+    <!--<a name="zhinengshuma"></a>-->
     <div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -1646,7 +1702,7 @@
 			</a>
 		</div>
 	</div>
-	<a name="shenghuojiadian"></a>
+	<!--<a name="shenghuojiadian"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -1836,7 +1892,7 @@
 			</a>
 		</div>
 	</div>
-	<a name="meiweishenghuo"></a>
+	<!--<a name="meiweishenghuo"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -2026,7 +2082,7 @@
 			</a>
 		</div>
 	</div>
-	<a name="meimamengwa"></a>
+	<!--<a name="meimamengwa"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -2216,7 +2272,7 @@
 			</a>
 		</div>
 	</div>
-	<a name="fuzhuangpeishi"></a>
+	<!--<a name="fuzhuangpeishi"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -2406,7 +2462,7 @@
 			</a>
 		</div>
 	</div>
-	<a name="jinrong"></a>
+	<!--<a name="jinrong"></a>-->
 	<div class="diwuceng">
 		<div class="diwuceng-left">
 			<div class="remen-top">
@@ -2597,85 +2653,59 @@
 		</div>
 	</div>
 	<!-- 猜你喜欢开始 -->
-	<a name="cainixihuan"></a>
+	<!--<a name="cainixihuan"></a>-->
 	<div class="dajuhui cainixihuan">
 		<div class="djh-top cnxhtop">
-			<div class="djh-top-left cnxhtitle0">猜你喜欢
-			</div>
+				<div class="djh-top-left cnxhtitle0">猜你喜欢
+				</div>
 		</div>
-		<ul class="djh-bottom cnxhbottom">
-			<li class="djh-list cnxhlist">
-				<a href="" class="djh-list1">
-				    <div class="djh-tupian cnxhtupian">
-					    <img src="img/cnxh1.webp.jpg" alt="">
-					</div>
-					<div class="wenzidjh cnxhwenzi1">
-					    <p class="wenzid4">自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL
-                        </p>
-					    <div class="djh-jiage cnxhjiage">
-						    <div class="jiage-d1">¥155.00</div>
-					</div>
-					</div>
+
+        <ul class="caini">
+            <li class="caichild">
+                <a href="" class="caichildren">
+					<img src="img/cnxh1.webp.jpg" alt="">
 				</a>
-			</li>
-			<li class="djh-list cnxhlist">
-				<a href="" class="djh-list1">
-				    <div class="djh-tupian cnxhtupian">
-					    <img src="img/cnxh1.webp.jpg" alt="">
-					</div>
-					<div class="wenzidjh cnxhwenzi1">
-					    <p class="wenzid4">自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL
-					    </p>
-					    <div class="djh-jiage cnxhjiage">
-						    <div class="jiage-d1">¥155.00</div>
-					</div>
-					</div>
+
+                <p>自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL</p>
+				<i>￥1233元</i>
+            </li>
+			<li class="caichild">
+				<a href="" class="caichildren">
+					<img src="img/cnxh1.webp.jpg" alt="">
 				</a>
+
+				<p>自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL</p>
+				<i>￥1233元</i>
 			</li>
-			<li class="djh-list cnxhlist">
-				<a href="" class="djh-list1">
-				    <div class="djh-tupian cnxhtupian">
-					    <img src="img/cnxh1.webp.jpg" alt="">
-					</div>
-					<div class="wenzidjh cnxhwenzi1">
-					    <p class="wenzid4">自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL
-					    </p>
-					    <div class="djh-jiage cnxhjiage">
-						    <div class="jiage-d1">¥155.00</div>
-					</div>
-					</div>
+			<li class="caichild">
+				<a href="" class="caichildren">
+					<img src="img/cnxh1.webp.jpg" alt="">
 				</a>
+
+				<p>自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL</p>
+				<i>￥1233元</i>
 			</li>
-			<li class="djh-list cnxhlist">
-				<a href="" class="djh-list1">
-				    <div class="djh-tupian cnxhtupian">
-					    <img src="img/cnxh1.webp.jpg" alt="">
-					</div>
-					<div class="wenzidjh cnxhwenzi1">
-					    <p class="wenzid4">自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL
-					    </p>
-					    <div class="djh-jiage cnxhjiage">
-						    <div class="jiage-d1">¥155.00</div>
-					</div>
-					</div>
+			<li class="caichild">
+				<a href="" class="caichildren">
+					<img src="img/cnxh1.webp.jpg" alt="">
 				</a>
+
+				<p>自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL</p>
+				<i>￥1233元</i>
 			</li>
-			<li class="djh-list cnxhlist">
-				<a href="" class="djh-list1">
-				    <div class="djh-tupian cnxhtupian">
-					    <img src="img/cnxh1.webp.jpg" alt="">
-					</div>
-					<div class="wenzidjh cnxhwenzi1">
-					    <p class="wenzid4">瑞典布鲁雅尔(Blueair) 家用型空气净化器 403 高效除净
-					    </p>
-					    <div class="djh-jiage cnxhjiage">
-						    <div class="jiage-d1">￥4399.00</div>
-					</div>
-					</div>
+			<li class="caichild">
+				<a href="" class="caichildren">
+					<img src="img/cnxh1.webp.jpg" alt="">
 				</a>
+
+				<p>自营帮宝适 (Pampers) 超薄干爽拉拉裤纸尿裤电商彩箱 加大号XL</p>
+				<i>￥1233元</i>
 			</li>
-		</ul>
+        </ul>
+
+
 	</div>
+ </div>
 	<!-- 猜你喜欢结束 -->
 	</div>
 	<!-- 底部 -->
@@ -2846,4 +2876,93 @@
 		</div>
 	</div>
 </body>
+	window.onload=function () {
+        let n=0;
+        let lis=document.querySelectorAll('.bannerpic li');
+        let banner=document.querySelector('.bannertu')
+        let right=document.querySelector('.jiantoudi.right')
+        let left=document.querySelector('.jiantoudi.left')
+        let cirs=document.querySelectorAll('.lunbodian li')
+        function move() {
+            n++;
+            if (n>=lis.length) {
+                n=0;
+            }
+            lis.forEach(function (dom, index) {
+                dom.classList.remove('active');
+                cirs[index].classList.remove('active')
+            })
+            lis[n].classList.add('active')
+            cirs[n].classList.add('active')
+
+        }
+        let t=setInterval(move,2000)
+        banner.onmouseover=function () {
+            clearInterval(t)
+        }
+        banner.onmouseout=function () {
+            t=setInterval(move,2000)
+        }
+        let flag=true
+        right.onclick=function () {
+            if(!flag){
+                return
+            }
+            flag=false
+            move()
+        }
+        left.onclick=function () {
+            if(!flag){
+                return
+            }
+            flag=false
+            n--;
+            if(n<0){
+                n=lis.length-1
+            }
+            lis.forEach(function (dom, index) {
+                dom.classList.remove('active');
+                cirs[index].classList.remove('active')
+            })
+            lis[n].classList.add('active')
+            cirs[n].classList.add('active')
+        }
+
+    cirs.forEach(function (val,index) {
+        val.onclick=function () {
+            if(!flag){
+                return
+            }
+            flag=false
+            lis.forEach(function (va,ind) {
+                va.classList.remove('active')
+                cirs[ind].classList.remove('active')
+            })
+            lis[index].classList.add('active')
+            this.classList.add('active')
+            n=index
+        }
+    })
+
+    lis.forEach(function (dom) {
+        dom.addEventListener('transitionend',function () {
+            flag=true
+        })
+    })
+
+
+    let nav=document.querySelectorAll('.djh-top .dajuhui_top_center');
+    let list=document.querySelectorAll('.dajuhui .djh-bottom')
+    nav.forEach(function (val,index) {
+        val.onmouseover=function () {
+            nav.forEach(function (a,b) {
+                a.classList.remove('active1')
+                list[b].classList.remove('activebtm')
+            })
+            this.classList.add('active1')
+            list[index].classList.add('activebtm')
+        }
+    })
+    }
+
 </html>
